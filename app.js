@@ -4,7 +4,6 @@ import cors from 'cors';
 import express from "express";
 import data from "./data/mock.js";
 import Task from "./models/Task.js";
-import { DATABASE_URL } from "./env.js";
 
 dotenv.config();
 
