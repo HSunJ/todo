@@ -1,13 +1,16 @@
 import mongoose, { mongo } from "mongoose";
 import * as dotenv from "dotenv";
+import cors from 'cors';
 import express from "express";
 import data from "./data/mock.js";
 import Task from "./models/Task.js";
 import { DATABASE_URL } from "./env.js";
 
 dotenv.config();
+
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const asyncHandler = (handle) => {
     return async (req, res) => {
