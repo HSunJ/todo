@@ -25,7 +25,7 @@ const asyncHandler = (handle) => {
     }
 }
 
-await mongoose.connect(DATABASE_URL).then(() => console.log('Connected to DB'));
+await mongoose.connect(process.env.DATABASE_URL).then(() => console.log('Connected to DB'));
 
 app.get('/tasks', asyncHandler( async (req, res) => {
 	const sort = req.query.sort
